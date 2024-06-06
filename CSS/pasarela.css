@@ -64,11 +64,16 @@ header {
     line-height: 1.5;
 }
 
-.modificar-datos {
-    color: #0066cc;
-    text-decoration: none;
+#modificar-datos {
+    background-color: #031924; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio de cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    margin-top: 5px;
 }
-
 .pago-content h4 {
     margin-top: 10px;
     margin-bottom: 10px;
