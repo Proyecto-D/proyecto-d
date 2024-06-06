@@ -58,7 +58,7 @@ function loadContent(page) {
                 import('../Controllers/carrito.js').then(module => module.cargarcarrito());
                 break;
             case 'tablaproduc.html':
-                import('../Controllers/tablaproduc.js').then(module => module.mostrarproductos());
+                import('../Controllers/tablaproduc.js').then(module => module.mostrarProductos());
                 break;                   
 
             default:
