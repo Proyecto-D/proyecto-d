@@ -2,7 +2,7 @@ import { loginGoogle, mensajeA } from '../Controllers/firebase.js'
 
 const google = document.getElementById('googleR')
 
-export async function logGoogle() {
+async function logGoogle() {
   try {
     await loginGoogle()
     mensajeA()
@@ -22,6 +22,7 @@ export async function logGoogle() {
   }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  google.addEventListener('click', logGoogle)
+google.addEventListener('click', (e) => {
+  e.preventDefault()
+  logGoogle()
 })
