@@ -1,4 +1,4 @@
-function initializeRating() {
+export function initializeRating() {
     const stars = document.querySelectorAll('.star');
     stars.forEach((star, index) => {
         star.addEventListener('click', () => {

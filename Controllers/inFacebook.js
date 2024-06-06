@@ -1,14 +1,13 @@
 import { loginFacebook, providerFacebook } from '../Controllers/firebase.js'
 
-const facebook = document.getElementById('facebookR')
+const facebook = document.getElementById('facebook')
 
-async function logFacebook() {
+export async function logFacebook() {
   try {
     await loginFacebook(providerFacebook)
-    window.location.href = '../templates/home.html'
+    window.location.href = '../Templates/home.html'
   } catch (error) {
-    console.error('Error al iniciar sesión con Facebook:', error)
-    alert('Error al iniciar sesión con Facebook. Inténtelo de nuevo.')
+    console.log(error)
   }
 }
 

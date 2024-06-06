@@ -9,7 +9,7 @@ const specialCharacters = /[!@#$%^&*(),.?":{}|<>]/
 const uppercaseLetter = /[A-Z]/
 const registrar = document.getElementById('registro')
 
-async function registro() {
+export async function registro() {
   const id = document.getElementById('document').value
   const us = document.getElementById('name').value
   const dir = document.getElementById('address').value

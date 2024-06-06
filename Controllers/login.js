@@ -3,7 +3,7 @@ import { loginauth, q } from '../Controllers/firebase.js'
 const caja = document.getElementById('login')
 const boton = caja['inicio']
 
-function validarCampos() {
+export function validarCampos() {
   const email = caja['username'].value.trim()
   const password = caja['password'].value.trim()
 
@@ -14,7 +14,7 @@ function validarCampos() {
   return true
 }
 
-async function inicioS() {
+export async function inicioS() {
   const email = caja['username'].value
   const password = caja['password'].value
 

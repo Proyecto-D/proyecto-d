@@ -66,41 +66,13 @@ window.onload = function() {
     });
 
     document.querySelector('#pagar').addEventListener('click', function() {
-        const nombre = document.querySelector('#nombre').value;
-        const email = document.querySelector('#email').value;
-    
-        if (!nombre || !email) {
-            alert('Por favor completa todos los campos antes de continuar.');
-            return;
-        }
-    
         if (!metodoSeleccionado) {
             alert('Por favor selecciona un método de pago antes de continuar.');
             return;
         }
-    
         alert('Pago realizado');
         window.location.href = '../Templates/home.html';
     });
-
-    document.querySelector('#modificar-datos').addEventListener('click', function() {
-        const nombre = document.querySelector('#nombre');
-        const email = document.querySelector('#email');
-        const boton = document.querySelector('#modificar-datos');
-    
-        if (nombre.readOnly && email.readOnly) {
-            // Si los campos son de solo lectura, habilita la edición y cambia el texto del botón
-            nombre.readOnly = false;
-            email.readOnly = false;
-            boton.innerText = 'Guardar';
-        } else {
-            // Si los campos son editables, deshabilita la edición y cambia el texto del botón
-            nombre.readOnly = true;
-            email.readOnly = true;
-            boton.innerText = 'Modificar';
-        }
-    });
 };
-
 
 

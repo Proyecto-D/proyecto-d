@@ -4,7 +4,7 @@ import {
     deleteCollection 
 } from '../Controllers/firebase.js';
 
-const imprimir = document.getElementById('contcarrito');
+
 const vaciar = document.getElementById('vaciarCarritoBtn');
 const pagar = document.getElementById('pagarBtn');
 const totalGeneralElement = document.getElementById('totalGeneral');
@@ -96,7 +96,7 @@ window.decrementarCantidad = async function(button, precio) {
     }
 }
 
-function actualizarTotal(button, cantidad, precio) {
+export function actualizarTotal(button, cantidad, precio) {
     
     var totalElement = button.closest('tr').querySelector('.total');  // Obtener el elemento td que contiene el total
     var nuevoTotal = cantidad * precio; // Calcular el nuevo total
@@ -105,7 +105,7 @@ function actualizarTotal(button, cantidad, precio) {
     actualizarTotalGeneral();   // Actualizar el total general después de actualizar el total de un producto
 }
 
-function actualizarTotalGeneral() {
+export function actualizarTotalGeneral() {
 
     // Recalcular el total general sumando todos los totales de los productos
     var totalGeneral = 0;
@@ -117,39 +117,29 @@ function actualizarTotalGeneral() {
     mostrarTotalGeneral(totalGeneral);  // Mostrar el total general actualizado
 }
     
-function mostrarMensajeSinProductos() {
+export function mostrarMensajeSinProductos() {
     mensajeSinProductos.style.display = 'block';
 }
 
 
-function mostrarTotalGeneral(total) {
+export function mostrarTotalGeneral(total) {
     totalGeneralElement.textContent = `Total: $${total}`;
     localStorage.setItem('totalGeneral', total); // Guardar el total en localStorage
 }
 
-async function eliminarcarrito(){
+export async function eliminarcarrito(){
     await deleteCollection('datoscarrito');
 }
-
 vaciar.addEventListener('click', async () => {
-    const productos = document.querySelectorAll('#contcarrito tr[data-codigo]');
-    if (productos.length === 0) {
-        alert('El carrito está vacío. No hay productos que eliminar.');
-    } else {
-        try {
-            await eliminarcarrito();
-            alert('Carrito vaciado exitosamente');
-            
-            // Restablecer el total general a 0
-            localStorage.setItem('totalGeneral', 0);
-            totalGeneralElement.textContent = `Total: $0`;
-
-            imprimir.innerHTML = ""; // Limpiar la tabla antes de cargar el carrito de nuevo
-            await cargarcarrito();
-        } catch (error) {
-            console.error('Error al eliminar', error);
-        }
-    }    
+    try {
+       await eliminarcarrito();
+        alert('carrito vaciado exitosamente');
+        
+        imprimir.innerHTML = ""; // Limpiar la tabla antes de cargar el carrito de nuevo
+        await cargarcarrito();
+    } catch (error) {
+        console.error('Error al eliminar', error);
+    }
 });
 
 pagar.addEventListener('click', async () => {
