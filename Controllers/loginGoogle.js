@@ -2,7 +2,7 @@ import { loginGoogle, mensajeA } from '../Controllers/firebase.js'
 
 const google = document.getElementById('googleR')
 
-async function logGoogle() {
+export async function logGoogle() {
   try {
     await loginGoogle()
     mensajeA()
