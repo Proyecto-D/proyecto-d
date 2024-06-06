@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pago</title>
+    <link rel="stylesheet" href="../CSS/pasarela.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <img src="../Resources/IMG/Logo.png" alt="Licoreralogo" class="logo">
+                <div>
+                    <h1>Licorera Fantasma</h1>
+                </div>
+            </div>
+        </header>
+        <div class="main-content">
+            <div class="section datos">
+                <h3>Tus datos</h3>
+                <div class="datos-content">
+                    <img src="../Resources/IMG/user.png" alt="User Icon" class="user-icon">
+                    <div class="user-info">
+                        <p>Nombre: <span id="nombre"></span></p>
+                        <p>Email: <span id="email"></span></p>
+                    </div>
+                </div>
+                <div><a href="#" class="modificar-datos">Modificar mis datos</a></div>
+            </div>
+            <div class="section pago">
+                <h3>Selecciona el medio de pago</h3>
+                <div class="pago-content">
+                    <h4>Tarjeta de crédito o débito</h4>
+                    <div class="tarjetas">
+                        <button id="visa">
+                            <img src="../Resources/IMG/visa.png" alt="Visa">
+                        </button>
+                        <button id="mastercard">
+                            <img src="../Resources/IMG/mastercard.png" alt="Mastercard">
+                        </button>
+                        <button id="codensa">
+                            <img src="../Resources/IMG/codensa.jpg" alt="Codensa">
+                        </button>
+                    </div>
+                    <h4>Débito bancario PSE</h4>
+                    <div class="pse">
+                        <button id="pse">
+                            <img src="../Resources/IMG/pse.png" alt="PSE">
+                        </button>
+                        <p>Recuerda verificar el monto máximo que tienes habilitado para pagos por internet. Acepta</p>
+                        <div>
+                            <button id="nequi">
+                                <img src="../Resources/IMG/nequi.webp" alt="Nequi">
+                            </button>
+                            <button id="davidplata">
+                                <img src="../Resources/IMG/davidplata.png" alt="Daviplata">
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Pago en efectivo</h4>
+                    <div class="efectivo">
+                        <button id = "efecty">
+                            <img src="../Resources/IMG/efecty.png" alt="Efecty">
+                        </button>
+                        <button id = "supergiros">
+                            <img src="../Resources/IMG/supergiros.png" alt="Supergiros">
+                        </button>
+                    </div>
+                    <h4>Pago en bancos</h4>
+                    <div class="bancos">
+                        <button id="bancodebogota">
+                            <img src="../Resources/IMG/bancodebogota.png" alt="Banco de Bogotá">
+                        </button>
+                        <button id="bancolombia">
+                            <img src="../Resources/IMG/bancolombia.png" alt="Bancolombia">
+                        </button>
+                        <button id="davivienda">
+                            <img src="../Resources/IMG/davivienda.png" alt="Davivienda">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="section resumen">
+                <h3>Resumen de la compra</h3>
+                <p>Referencia: <span id="referencia"></span></p>
+                <p>Metodo de pago: <span id="metodopago"></span></p>
+                <p><span id="total" class="total"></span></p>
+                <button id="pagar">Pagar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="../Controllers/pasarela.js"></script>
+</html>

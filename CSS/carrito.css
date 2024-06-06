@@ -1,0 +1,64 @@
+.container {
+    overflow-x: auto; /* Permite que la tabla sea responsive */
+}
+
+#carritoTable {
+    width: 100%; /* La tabla ocupa el ancho disponible */
+    border-collapse: collapse; /* Combina los bordes de las celdas */
+}
+
+#carritoTable th, #carritoTable td {
+    border: 1px solid #c9e6f4; /* Bordes para las celdas con el color especificado */
+    padding: 8px; /* Espacio interno dentro de las celdas */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Anchura específica para cada columna */
+#carritoTable th:first-child,
+#carritoTable td:first-child {
+    width: 50%; /* Producto */
+}
+
+#carritoTable th:nth-child(2),
+#carritoTable td:nth-child(2) {
+    width: 25%; /* Cantidad */
+}
+
+#carritoTable th:nth-child(3),
+#carritoTable td:nth-child(3) {
+    width: 25%; /* Total */
+}
+
+/* Estilos para el botón Vaciar Carrito */
+#vaciarCarritoBtn {
+    background-color: #031924; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: 10px; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio de cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    margin-right: 6px;
+    margin-top: 5px;
+
+}
+
+#vaciarCarritoBtn:hover {
+    background-color: #024a35; /* Color de fondo al pasar el mouse */
+}
+
+#pagarBtn {
+    background-color: #031924; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: 10px; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio de cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    margin-top: 5px;
+}
+
+#pagarBtn:hover {
+    background-color: #024a35; /* Color de fondo al pasar el mouse */
+
+}

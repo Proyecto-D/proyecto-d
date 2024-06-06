@@ -1,0 +1,72 @@
+/* Estilo para el carrusel de imágenes en el div class="album" */
+.album {
+    width: 500px; /* Ancho del carrusel */
+    height: 300px; /* Altura del carrusel */
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+.album img {
+    width: auto; /* Ancho de la imagen */
+    height: 300px; /* Altura de la imagen */
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.album img.active {
+    opacity: 1;
+}
+/* Ajusta la duración de la transición y el tiempo de espera entre imágenes */
+@keyframes slideshow {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.album img:nth-child(1) { animation: slideshow 12s infinite; }
+.album img:nth-child(2) { animation: slideshow 12s infinite 6s; }
+.album img:nth-child(3) { animation: slideshow 12s infinite 12s; }
+.album img:nth-child(4) { animation: slideshow 12s infinite 18s; }
+.album img:nth-child(4) { animation: slideshow 12s infinite 24s; }
+
+/* Estilo para la ubicación del párrafo y la imagen en div class="mision" */
+.mision {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.mision p {
+    flex: 1;
+    padding-right: 20px; /* Espacio entre el párrafo y la imagen */
+}
+.imgmision {
+    flex: 1;
+}
+
+/* Estilo para la ubicación del párrafo y la imagen en div class="vision" */
+.vision {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.vision p {
+    flex: 1;
+    padding-left: 20px; /* Espacio entre el párrafo y la imagen */
+}
+.imgvision {
+    flex: 1;
+}
+
+/* Estilo para la ubicación de la lista y la imagen en div class="valores" */
+.valores {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.valores ul {
+    flex: 1;
+    padding-right: 20px; /* Espacio entre la lista y la imagen */
+}
+.imgvalores {
+    flex: 1;
+}

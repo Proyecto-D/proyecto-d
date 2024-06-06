@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #031924;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 80%;
+  background: linear-gradient(to right, #1abc9c, #031924);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 50%;
+  background-color: rgba(203, 169, 131, 0.3);
+  color: #fff;
+  border-right: 2px solid #0b2333;
+}
+
+.login-box h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.input-box input {
+  width: 90%;
+  padding: 10px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fffceb;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.input-box label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: #031924;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #0c3950;
+  font-size: 12px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.login-btn {
+  background-color: rgba(22, 88, 8, 0.3);
+  color: #fff;
+}
+
+.google-btn {
+  background-color: rgba(231, 46, 26, 0.3);
+  color: #fff;
+}
+
+.facebook-btn {
+  background-color: rgba(20, 81, 214, 0.3);
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.login-box p {
+  margin: 10px 0;
+}
+
+.login-box a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+.welcome-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 50%;
+  color: #fff;
+  text-align: center;
+}
+
+.welcome-box h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.welcome-box p {
+  font-size: 18px;
+}

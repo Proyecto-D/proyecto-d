@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.section {
+    width: 48%;
+}
+
+.datos-content, .pago-content {
+    border: 1px solid #eaeaea;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.datos-content {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.user-details p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.modificar-datos {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.pago-content h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tarjetas img, .pse img, .efectivo img {
+    width: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.bancos img{
+    width: 105px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+button img {
+    width: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+button:focus {
+    outline: 2px solid #0066cc; /* Para accesibilidad */
+}
+.resumen {
+    padding: 15px;
+    border: 1px solid #eaeaea;
+    background-color: #f9f9f9;
+}
+
+.resumen p {
+    margin: 5px 0;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#pagar {
+    background-color: #031924; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: 10px; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio de cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    margin-top: 5px;
+}

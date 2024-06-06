@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licorera</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="/Resources/IMG/Logo.png " style="height: 60px; width: 70px;" alt="Licorera">
+        </div>
+        <div class="nav-links">
+            <div class="licorera">
+                <a href="#" onclick="loadContent('principal.html'); return false;">Home</a>
+                <a href="#" onclick="loadContent('quienes_somos.html'); return false;">¿Quiénes Somos?</a>
+                <div class="dropdown">
+                    <a href="#" onclick="loadContent('productos.html'); return false;">Productos</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="loadContent('cerveza.html'); return false;">Cerveza</a>
+                        <a href="#" onclick="loadContent('aguardiente.html'); return false;">Aguardiente</a>
+                        <a href="#" onclick="loadContent('vodka.html'); return false;">Vodka</a>
+                        <a href="#" onclick="loadContent('whisky.html'); return false;">Whisky</a>
+                        <a href="#" onclick="loadContent('vinos_y_champañas.html'); return false;">Vinos y Champañas</a>
+                        <a href="#" onclick="loadContent('tequila.html'); return false;">Tequila</a>
+                        <a href="#" onclick="loadContent('ron.html'); return false;">Ron</a>
+                        <a href="#" onclick="loadContent('ginebra.html'); return false;">Ginebra</a>
+                        <a href="#" onclick="loadContent('brandy.html'); return false;">Brandy</a>
+                        <a href="#" onclick="loadContent('no_licores.html'); return false;">No Licores</a>
+                        <a href="#" onclick="loadContent('paquetes.html'); return false;">Paquetes</a>
+                        <a href="#" onclick="loadContent('productos.html'); return false;">Todos los productos</a>
+                    </div>
+                </div>
+                <a href="#" onclick="loadContent('agregar_produc.html'); return false;">Agregar Producto</a>
+            </div>
+
+            <div class="miCuenta">
+                <div class="dropdown">
+                    <a href="">Cuenta</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="loadContent('login.html'); return false;">Iniciar Sesion</a>
+                        <a href="#" onclick="loadContent('register.html'); return false;">Crear Cuenta</a>
+                        <a href="#" onclick="loadContent('mi_cuenta.html'); return false;">Mi cuenta</a>
+                        <a href="#" id="logout">Cerrar Sesion</a>
+                    </div>
+                </div>
+                <div style="padding: 20px; padding-left: 30px;">
+                    <a href="#" onclick="loadContent('carrito.html'); return false;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Contenido dinámico basado en el nav -->
+        <h1>Bienvenidos a la Licorera</h1>
+        <p>Seleccione una opción del menú para comenzar.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="/Controllers/loadContent.js"></script>
+</body>
+<footer>
+    huas huas
+</footer>
+</html>

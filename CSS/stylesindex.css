@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2c3e50;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 80%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  .age-verification {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 40%;
+    background-color: #1abc9c;
+    color: #fff;
+  }
+  
+  .logo img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .message h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .message p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn.no {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .btn.yes {
+    background-color: #2ecc71;
+    color: #fff;
+  }
+  
+  .btn:hover {
+    opacity: 0.8;
+  }
+  
+  .background-image {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('path/to/background.jpg') no-repeat center center/cover;
+  }
+  
+  .background-image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  

@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #031924;
+    color: #fffceb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: #fffceb; /* Cambia el color del texto a blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    padding: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Opcional: Añadir subrayado al pasar el ratón */
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+}
+
+nav .logo img {
+    height: 60px;
+    width: 70px;
+}
+
+nav .nav-links {
+    display: flex;
+    
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+nav .licorera {
+    display: flex;
+    align-items: center;
+}
+
+nav .licorera .dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+nav .licorera .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #031924;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+}
+
+nav .licorera .dropdown-content a {
+    color: #fffceb;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+nav .licorera .dropdown-content a:hover {
+    background-color: #cba983;
+}
+
+nav .licorera .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav .miCuenta {
+    display: flex;
+    align-items: center;
+}
+
+nav .miCuenta .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+nav .miCuenta .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #031924;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav .miCuenta .dropdown-content a {
+    color: #fffceb;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+nav .miCuenta .dropdown-content a:hover {
+    background-color: #cba983;
+}
+
+nav .miCuenta .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    width: 200px;
+    height:auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.card .details {
+    margin-top: 10px;
+}
+
+.card .price {
+    color: green;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.card .actions {
+    margin-top: 10px;
+}
+
+.card .actions button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.card .actions .add-to-cart {
+    background-color: #28a745;
+    color: white;
+}
+
+.card .actions .favorite {
+    background-color: #ffc107;
+    color: white;
+}
+
+.card .rating {
+    margin-top: 10px;
+}
+
+.card .rating .star {
+    font-size: 1.5em;
+    color: gray;
+    cursor: pointer;
+}
+
+.card .rating .star.selected {
+    color: gold;
+}
