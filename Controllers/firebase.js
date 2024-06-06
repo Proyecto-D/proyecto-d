@@ -99,14 +99,14 @@ export const EliminarProductoDelCarrito = async (codigo) => {
 export async function deleteCollection(collectionPath) {
   const querySnapshot = await getDocs(collection(db, collectionPath))
 
-  for (const doc of querySnapshot.docs) {
+  querySnapshot.forEach(async (doc) => {
     try {
       await deleteDoc(doc.ref)
       console.log(`Documento eliminado: ${doc.id}`)
     } catch (error) {
       console.error(`Error al eliminar documento ${doc.id}:`, error)
     }
-  }
+  })
 }
 
 //Leer registro especifico

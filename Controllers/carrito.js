@@ -4,13 +4,16 @@ import {
     deleteCollection 
 } from '../Controllers/firebase.js';
 
-const imprimir = document.getElementById('contcarrito');
+
 const vaciar = document.getElementById('vaciarCarritoBtn');
 const pagar = document.getElementById('pagarBtn');
 const totalGeneralElement = document.getElementById('totalGeneral');
 const mensajeSinProductos = document.getElementById('mensajeSinProductos');
 
 export async function cargarcarrito() {
+
+    const imprimir = document.getElementById('contcarrito');
+
     try {
         const querySnapshot = await GetCarritoDocs();
         let html = "";
@@ -140,19 +143,13 @@ vaciar.addEventListener('click', async () => {
 });
 
 pagar.addEventListener('click', async () => {
-    // Verificar si hay productos en el carrito
-    const productos = document.querySelectorAll('#contcarrito tr[data-codigo]');
-    if (productos.length === 0) {
-        alert('El carrito está vacío. Por favor, añade productos antes de pagar.');
-    } else {
-        try {
-            imprimir.innerHTML = "";
-            await eliminarcarrito();
-            alert('Redirigiendo a la pasarela de pago...')
-            window.location.href = '../Templates/pasarela.html'; // Redirigir a la página de pasarela
-        } catch (error) {
-            console.error('Error al eliminar', error);
-        }
+    try {
+        imprimir.innerHTML = "";
+        await eliminarcarrito();
+        alert('Redirigiendo a la pasarela de pago...')
+         window.location.href = '../Templates/pasarela.html'; // Redirigir a la página de pasarela
+    } catch (error) {
+        console.error('Error al eliminar', error);
     }
 });
 
