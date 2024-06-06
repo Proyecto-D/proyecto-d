@@ -130,16 +130,22 @@ function mostrarTotalGeneral(total) {
 async function eliminarcarrito(){
     await deleteCollection('datoscarrito');
 }
+
 vaciar.addEventListener('click', async () => {
-    try {
-       await eliminarcarrito();
-        alert('carrito vaciado exitosamente');
-        
-        imprimir.innerHTML = ""; // Limpiar la tabla antes de cargar el carrito de nuevo
-        await cargarcarrito();
-    } catch (error) {
-        console.error('Error al eliminar', error);
-    }
+    const productos = document.querySelectorAll('#contcarrito tr[data-codigo]');
+    if (productos.length === 0) {
+        alert('El carrito está vacío. No hay productos que eliminar.');
+    } else {
+        try {
+        await eliminarcarrito();
+            alert('carrito vaciado exitosamente');
+            
+            imprimir.innerHTML = ""; // Limpiar la tabla antes de cargar el carrito de nuevo
+            await cargarcarrito();
+        } catch (error) {
+            console.error('Error al eliminar', error);
+        }
+    }    
 });
 
 pagar.addEventListener('click', async () => {
