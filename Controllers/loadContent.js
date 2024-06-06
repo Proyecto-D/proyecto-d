@@ -56,11 +56,7 @@ function loadContent(page) {
                 break;
             case 'carrito.html':
                 import('../Controllers/carrito.js').then(module => module.cargarcarrito());
-                break;
-            case 'carritoinic.html':
-                import('../Controllers/carritoinic.js').then(module => module.cargarcarritoinic());
-            break;
-                
+                break; 
             case 'tablaproduc.html':
                 import('../Controllers/tablaproduc.js').then(module => module.mostrarProductos());
             break;
