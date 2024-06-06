@@ -1,6 +1,6 @@
 import { GetProductosDocs, EliminarProducto, Setregister } from './firebase.js'
 
-async function mostrarProductos() {
+export async function mostrarProductos() {
   const querySnapshot = await GetProductosDocs()
 
   const tablaProductos = document.getElementById('tablaProductos')
