@@ -1,0 +1,31 @@
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="/CSS/recovery.css">
+
+<div class="wrapper">
+    <span class="bg-animate"></span>
+    <span class="bg-animate2"></span>
+    <form>
+      <div class="form-box login">
+        <h2 class="animation" style="--i: 0; --j: 21">Recuperar</h2>
+        <div class="box" style="width: 40%;">
+          <input id="verCorr" type="text" required />
+          <label>Direccion de correo</label>
+          <i class="bx bxs-user"></i>
+        </div>
+        <button class="btn animation" id="recort" style="--i: 2; --j: 24">
+          Enviar mensaje
+        </button>
+        <button class="btn2 animation" id="volver" style="--i: 3; --j: 24">
+          Volver
+        </button>
+      </div>
+    </form>
+    <div class="info-text login">
+      <h2 class="animation" style="--i: 0; --j: 20">Bienvenido</h2>
+      <p class="animation" style="--i: 1; --j: 21">
+        Este es su menú de recuperación de contraseña, por favor llene el
+        campo del correo.
+      </p>
+    </div>
+  </div>
+  <script type="module" src="/Controllers/passrecovery.js"></script>
