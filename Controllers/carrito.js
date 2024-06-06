@@ -137,9 +137,13 @@ vaciar.addEventListener('click', async () => {
         alert('El carrito está vacío. No hay productos que eliminar.');
     } else {
         try {
-        await eliminarcarrito();
-            alert('carrito vaciado exitosamente');
+            await eliminarcarrito();
+            alert('Carrito vaciado exitosamente');
             
+            // Restablecer el total general a 0
+            localStorage.setItem('totalGeneral', 0);
+            totalGeneralElement.textContent = `Total: $0`;
+
             imprimir.innerHTML = ""; // Limpiar la tabla antes de cargar el carrito de nuevo
             await cargarcarrito();
         } catch (error) {
