@@ -45,11 +45,23 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
-const auth = getAuth(app)
+export const auth = getAuth(app)
 const db = getFirestore(app)
 const storage = getStorage()
 const providerGoogle = new GoogleAuthProvider()
 const providerFabook = new FacebookAuthProvider()
+
+
+
+export function verificarAutenticacion(user) {
+  if (user) {
+    console.log('Usuario autenticado:', user.uid);
+    return true;
+  } else {
+    console.log('No hay ningún usuario autenticado.');
+    return false;
+  }
+}
 
 //agregar datos con id
 export const Setregister = (codigo, name, categoria, precio, urlproducto) =>
