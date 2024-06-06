@@ -1,4 +1,4 @@
-import { Getcategoria, Setcarrito, Getcarrito } from '../Controllers/firebase.js';
+import { Getcategoria, Setcarrito, Getcarrito, auth, verificarAutenticacion } from '../Controllers/firebase.js';
 
 export async function Ver() {
     const imprimir = document.getElementById('cont');
