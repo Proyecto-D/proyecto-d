@@ -39,6 +39,15 @@ export async function Ver() {
 
 window.agregarAlCarrito = function(codigo, nombre, precio, urlproducto) {
     const cantidad = 1;
+    // Verificar si el usuario está autenticado
+    const estaAutenticado = verificarAutenticacion(auth.currentUser);
+    if (!estaAutenticado) {
+        // Usuario no autenticado, mostrar mensaje
+        alert('Debe iniciar sesión para poder agregar productos al carrito de compras');
+        // Detener la ejecución de la función
+        return;
+    }
+    // Usuario autenticado, proceder a agregar al carrito
     Getcarrito(codigo)
         .then(docSnapshot => {
             if (docSnapshot.exists()) {
