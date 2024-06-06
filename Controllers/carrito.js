@@ -141,9 +141,8 @@ vaciar.addEventListener('click', async () => {
 
 pagar.addEventListener('click', async () => {
     try {
-        await eliminarcarrito();
         imprimir.innerHTML = "";
-        await cargarcarrito();
+        await eliminarcarrito();
         alert('Redirigiendo a la pasarela de pago...')
          window.location.href = '../Templates/pasarela.html'; // Redirigir a la página de pasarela
     } catch (error) {
