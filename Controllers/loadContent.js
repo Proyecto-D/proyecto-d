@@ -12,7 +12,7 @@ function loadContent(page) {
                 import('./login.js').then(module => module.inicioS())
                 import('./login.js').then(module => module.validarCampos());
                 import('./inFacebook.js').then(module => module.logFacebook());
-                import('./loginGoogle.js').then(module => module.logGoogle());
+                import('../Controllers/loginGoogle.js').then(module=>module.logGoogle())
                 break;
             case 'register.html':
                 import('./register.js').then(module => module.registro())
@@ -57,9 +57,10 @@ function loadContent(page) {
             case 'carrito.html':
                 import('../Controllers/carrito.js').then(module => module.cargarcarrito());
                 break;
-            case 'tablaproduc.html':
-                import('../Controllers/tablaproduc.js').then(module => module.mostrarProductos());
-                break;                   
+            case 'carritoinic.html':
+                import('../Controllers/carritoinic.js').then(module => module.cargarcarritoinic());
+                
+                break;
 
             default:
                 console.warn('Page not found: ', page);
