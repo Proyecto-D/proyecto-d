@@ -49,6 +49,7 @@ btnEditar.addEventListener('click', () => {
     tdCategoria.contentEditable = true
     tdPrecio.contentEditable = true
     // Cambiar el texto del botón a "Guardar"
+    alert('Ahora puede editar el contenido del producto')
     btnEditar.textContent = 'Guardar'
   } else {
     // Guardar los cambios en Firebase
@@ -57,21 +58,25 @@ btnEditar.addEventListener('click', () => {
     tdNombre.contentEditable = false
     tdCategoria.contentEditable = false
     tdPrecio.contentEditable = false
+    alert('Los cambios han sido guardados')
     // Cambiar el texto del botón de nuevo a "Editar"
     btnEditar.textContent = 'Editar'
   }
 })
 
-    const btnEliminar = document.createElement('button')
-    btnEliminar.textContent = 'Eliminar'
-    btnEliminar.className = 'btn btn-success'
-    btnEliminar.addEventListener('click', async () => {
-      // Eliminar el producto de Firebase
-      await EliminarProducto(producto.codigo)
-      // Eliminar la fila de la tabla
-      tr.remove()
-    })
-
+const btnEliminar = document.createElement('button')
+btnEliminar.textContent = 'Eliminar'
+btnEliminar.className = 'btn btn-success'
+btnEliminar.addEventListener('click', async () => {
+  // Confirmar antes de eliminar
+  let confirmar = confirm("¿Estás seguro de que quieres eliminar este producto?");
+  if (confirmar) {
+    // Eliminar el producto de Firebase
+    await EliminarProducto(producto.codigo)
+    // Eliminar la fila de la tabla
+    tr.remove()
+  }
+})
     // Agregar los botones a la fila
     tr.appendChild(btnEditar)
     tr.appendChild(btnEliminar)
