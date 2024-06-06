@@ -56,11 +56,6 @@ function loadContent(page) {
                 break;
             case 'carrito.html':
                 import('../Controllers/carrito.js').then(module => module.cargarcarrito());
-                import('../Controllers/carrito.js').then(module => module.actualizarTotal());
-                import('../Controllers/carrito.js').then(module => module.mostrarMensajeSinProductos());
-                import('../Controllers/carrito.js').then(module => module.actualizarTotalGeneral());
-                import('../Controllers/carrito.js').then(module => module.mostrarTotalGeneral());
-                import('../Controllers/carrito.js').then(module => module.eliminarcarrito());
                 break;
 
             default:
