@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Licorera</title>
+        <link rel="stylesheet" href="/CSS/styles.css">
+        <link rel="stylesheet" href="/CSS/footer.css">
+
+    </head>
+    <body>
+
+        <nav>
+            <div class="logo">
+                <img src="/Resources/IMG/Logo.png " style="height: 60px; width: 70px;" alt="Licorera">
+            </div>
+            <div class="nav-links">
+                <div class="licorera">
+                    <a href="#" onclick="loadContent('principal.html'); return false;">Home</a>
+                    <a href="#" onclick="loadContent('quienes_somos.html'); return false;">¿Quiénes Somos?</a>
+                    <div class="dropdown">
+                        <a href="#" onclick="loadContent('productos.html'); return false;">Productos</a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="loadContent('cerveza.html'); return false;">Cerveza</a>
+                            <a href="#" onclick="loadContent('aguardiente.html'); return false;">Aguardiente</a>
+                            <a href="#" onclick="loadContent('vodka.html'); return false;">Vodka</a>
+                            <a href="#" onclick="loadContent('whisky.html'); return false;">Whisky</a>
+                            <a href="#" onclick="loadContent('vinos_y_champañas.html'); return false;">Vinos y Champañas</a>
+                            <a href="#" onclick="loadContent('tequila.html'); return false;">Tequila</a>
+                            <a href="#" onclick="loadContent('ron.html'); return false;">Ron</a>
+                            <a href="#" onclick="loadContent('ginebra.html'); return false;">Ginebra</a>
+                            <a href="#" onclick="loadContent('brandy.html'); return false;">Brandy</a>
+                            <a href="#" onclick="loadContent('no_licores.html'); return false;">No Licores</a>
+                            <a href="#" onclick="loadContent('paquetes.html'); return false;">Paquetes</a>
+                            <a href="#" onclick="loadContent('productos.html'); return false;">Todos los productos</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="miCuenta">
+                    <div class="dropdown">
+                        <a href="">Cuenta</a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="loadContent('login.html'); return false;">Iniciar Sesion</a>
+                            <a href="#" onclick="loadContent('register.html'); return false;">Crear Cuenta</a>
+                            <a href="#" id="logout">Cerrar Sesion</a>
+                        </div>
+                    </div>
+                    <div style="padding: 20px; padding-left: 30px;">
+                        <a href="#" onclick="loadContent('carrito.html'); return false;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1>¡Bienvenidos a la Licorera!</h1>
+            <p>Gracias por visitarnos. En la Licorera, nos tomamos muy en serio nuestra responsabilidad social y queremos compartir contigo algunas reflexiones importantes sobre el consumo de bebidas alcohólicas.</p>
+
+            <h2>Protegiendo a nuestros jóvenes</h2>
+            <p>Es crucial entender que la venta de bebidas alcohólicas a menores de edad es ilegal y moralmente inaceptable. El consumo temprano de alcohol puede tener consecuencias devastadoras en el desarrollo físico, mental y emocional de los jóvenes. Como sociedad, debemos proteger a nuestra juventud y educarlos sobre los riesgos asociados con el consumo de alcohol.</p>
+
+            <h2>Responsabilidad al volante</h2>
+            <p>Otro aspecto fundamental es el consumo responsable de alcohol al conducir. Conducir bajo los efectos del alcohol es extremadamente peligroso y puede resultar en accidentes graves e incluso mortales. Nunca debes poner en riesgo tu vida y la de los demás al tomar la decisión irresponsable de manejar después de haber bebido. Si vas a beber, siempre designa a un conductor sobrio o utiliza servicios de transporte alternativos.</p>
+
+            <h2>Leyes colombianas sobre el consumo de alcohol</h2>
+            <p>En Colombia, existen leyes estrictas que regulan el consumo y la venta de bebidas alcohólicas. Por ejemplo, la Ley 124 de 1994 establece la prohibición de la venta de alcohol a menores de edad y la Ley 1696 de 2013 aumenta las sanciones para aquellos que suministren alcohol a menores. Además, el Código Nacional de Tránsito establece duras penalidades para quienes conduzcan bajo los efectos del alcohol, incluyendo multas y la suspensión de la licencia de conducir.</p>
+
+            <p>En la Licorera, nos comprometemos a cumplir rigurosamente con estas leyes y a promover un consumo responsable de alcohol. Queremos ser parte de la solución y contribuir a una sociedad más segura y saludable para todos.</p>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <script src="/Controllers/loadContent.js"></script>
+        <script type="module" src="/Controllers/logout.js"></script>
+    </body>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <ul class="social-links">
+                    <li><a href="https://m.facebook.com" target="_blank"><img src="/Resources/IMG/fb.png " alt="Facebook" style="width: 50px; height: 50px;"></a></li>
+                    <li><a href="https://m.instagram.com" target="_blank"><img src="/Resources/IMG/ig.png" alt="Instagram" style="width: 50px; height: 50px;"></a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <img src="/Resources/Logo.png" alt="Logo Licorera" class="logo" style="width: 60px; height: 50px;">
+                <ul class="contact-links">
+                    <li><a href="https://maps.app.goo.gl/tJgo1YM5dZC6uPt97" target="_blank"><i class="fas fa-map-marker-alt"></i> ¿Cómo llegar?</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=573224013192&amp;text=Me%20interesa%20saber%20m%C3%A1s%20sobre.." target="_blank"> 3224013192</a></li>
+                    <li><a href="https://proyecto-d.github.io/"><i class="fas fa-link"></i>Licorera Fantasma</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <div class="icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <path fill="#fffceb" d="M29.1,81.9c-0.9-0.8-2.3-0.7-3,0.3l-5.3,6.4l-2-1.6c-0.9-0.8-2.3-0.7-3,0.3c-0.8,0.9-0.7,2.3,0.3,3l3.6,3    c0.4,0.3,0.9,0.5,1.3,0.5H21c0.5,0,1.1-0.3,1.5-0.8l6.8-8.1C30.2,84.1,30,82.7,29.1,81.9z"></path>
+                        <path fill="#fffceb" d="M110.5,48.8h-3c-2.5-0.1-4.6-2.4-7-4.9c-1.6-1.7-3.3-3.6-5.4-4.9V20.7c0-3.2-2.7-5.8-5.8-5.8h-70c-3.2,0-5.8,2.7-5.8,5.8    v14.8c0,1.2,0.9,2.1,2.1,2.1s2.1-0.9,2.1-2.1V20.7c0-0.8,0.7-1.6,1.6-1.6h23.7v19c0,0.8,0.4,1.5,1.1,1.9c0.3,0.1,0.7,0.3,1.1,0.3    s0.8-0.1,1.2-0.3l8-5l8,5c0.7,0.4,1.5,0.4,2.1,0c0.7-0.4,1.1-1.1,1.1-1.9v-19H89c0.8,0,1.6,0.7,1.6,1.6v16.6    c-0.7-0.1-1.5-0.3-2.3-0.3l0,0h-5.3h-4.2h-2.5l0,0c-2.7,0-4,1.2-4.6,2.3c-1.1,1.5-1.1,3.6-0.3,5.8c0.1,0.5,0.4,1.1,0.7,1.5H55.8    c-3.4,0-6.4,2.8-6.4,6.4c0,0.7,0.1,1.5,0.4,2.1h-0.5c-3.4,0-6.4,2.8-6.4,6.4c0,3.4,2.8,6.4,6.4,6.4h0.5c-0.3,0.7-0.4,1.3-0.4,2    c0,3.4,2.7,6.2,6,6.4c-0.3,0.7-0.4,1.3-0.4,2.1c0,3.4,2.8,6.4,6.4,6.4H88c0.9,0,1.7-0.1,2.5-0.3v6.8c0,0.8-0.7,1.6-1.6,1.6H39.2    c0.4-1.5,0.7-3,0.7-4.8c0-9.7-7.8-17.5-17.5-17.5c-1.7,0-3.4,0.3-5,0.8V54.9c0-1.2-0.9-2.1-2.1-2.1s-2.1,0.9-2.1,2.1v18    C8.2,76,5,81.4,5,87.6c0,9.7,7.8,17.5,17.5,17.5c6.4,0,11.9-3.4,15-8.5H89c3.2,0,5.8-2.7,5.8-5.8v-8.9c0.5-0.4,0.9-0.7,1.3-1.1    c2.1-1.5,3.7-2.7,6.4-2.7h8c2.5,0,4.5-2,4.5-4.5V53.4C115.1,50.9,113,48.8,110.5,48.8L110.5,48.8z M61.1,34.4l-5.8-3.6    c-0.7-0.4-1.6-0.4-2.3,0l-5.8,3.6V19.1h13.9C61.1,19.1,61.1,34.4,61.1,34.4z M22.6,100.8c-7.3,0-13.1-6-13.1-13.1    c0-7.3,5.8-13.1,13.1-13.1s13.1,5.8,13.1,13.1C35.7,94.9,29.9,100.8,22.6,100.8z M110.8,73.6c0,0.1-0.1,0.3-0.3,0.3h-8    c-4.1,0-6.6,1.9-8.7,3.6c-1.9,1.5-3.3,2.5-5.6,2.5H61.6c-1.2,0-2-0.9-2-2c0-1.2,0.9-2,2-2h7.2c1.2,0,2.1-0.9,2.1-2.1    s-0.9-2.1-2.1-2.1H56c-1.2,0-2-0.9-2-2.1s0.9-2,2-2h12.7c1.2,0,2.1-0.9,2.1-2.1c0-1.2-0.9-2.1-2.1-2.1H49.4c-1.2,0-2-0.9-2-2    c0-1.2,0.9-2,2-2h19.3c1.2,0,2.1-0.9,2.1-2.1c0-1.2-0.9-2.1-2.1-2.1H56c-1.2,0-2-0.9-2-2.1c0-1.2,0.9-2,2-2h23.9h4.6h3    c1.2,0,2.1-0.9,2.1-2.1c0-1.2-0.9-2.5-2-2.5h-3.2h-4.6c-2,0-3.7-1.2-4.4-3c-0.4-1.1-0.3-1.7-0.1-1.9c0.1-0.1,0.5-0.3,1.1-0.3h6.6    h5.4c3.6,0.1,6.1,2.8,8.9,5.6c2.8,2.9,5.7,6.1,10.1,6.2c0,0,0,0,0.1,0h2.9c0.1,0,0.3,0.1,0.3,0.3V73.6L110.8,73.6z"></path>
+                    </svg>
+                    <h5>Servicio de Entrega</h5>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <path fill="#fffceb" d="M74,33.8c-0.3-0.8-1-1.4-1.8-1.5l-7-1L62.1,25c-0.4-0.8-1.3-1.3-2.1-1.3s-1.7,0.6-2.1,1.3l-3.1,6.3l-7,1     c-0.8,0.1-1.5,0.7-1.8,1.5c-0.3,0.8,0,1.8,0.6,2.4l5,4.9l-1.3,7c-0.1,0.8,0.1,1.7,1,2.2c0.7,0.6,1.7,0.6,2.4,0.1l6.3-3.2l6.3,3.2     c0.3,0.1,0.7,0.3,1.1,0.3s1-0.1,1.4-0.4c0.7-0.6,1.1-1.4,1-2.2l-1.3-7l5-4.9C74.1,35.5,74.2,34.6,74,33.8z M64.3,38.5     c-0.6,0.6-0.8,1.3-0.7,2.1l0.6,3.5l-3.2-1.7c-0.3-0.1-0.7-0.3-1.1-0.3c-0.4,0-0.7,0.1-1.1,0.3l-3.2,1.7l0.6-3.5     c0.1-0.7-0.1-1.5-0.7-2.1L52.8,36l3.5-0.6c0.7-0.1,1.4-0.6,1.7-1.3l1.5-3.2l1.5,3.2c0.3,0.7,1,1.1,1.7,1.3l3.5,0.6L64.3,38.5z"></path>
+                        <path fill="#fffceb" d="M101.1,19.7c-1.4-1.7-3.4-2.5-5.5-2.5h-7v-2.2c0-2.7-2.2-4.9-4.9-4.9H36.3c-2.7,0-4.9,2.2-4.9,4.9v2.2h-7     c-2.1,0-4.2,1-5.5,2.5c-1.4,1.5-2,3.8-1.7,5.7c1.8,11.3,9,21.3,19,26.7c1,2.2,2,4.3,3.1,6.3C43.2,64.7,47.8,69,52.8,71     c0.6,5.2-2.9,10.1-8.1,11.3l0,0c-1,0.3-1.8,1.1-1.8,2.2v10.6h-4.3c-3.8,0-7,3.1-7,7v5.5c0,1.3,1,2.4,2.4,2.4h52.3     c1.3,0,2.4-1,2.4-2.4v-5.5c0-3.8-3.1-7-7-7h-4.3V84.5c0-1.1-0.7-2-1.8-2.2l0,0c-5.3-1.1-8.7-6.2-8.1-11.5     c5-2.1,9.5-6.4,13.1-12.6c1.1-2,2.2-4.1,3.1-6.3c10.1-5.5,17.2-15.4,19-26.7C103,23.3,102.5,21.2,101.1,19.7z M21.8,24.7     c-0.1-0.7,0.1-1.4,0.6-2.1c0.6-0.6,1.3-1,2-1h7v4.2c0,6.7,0.8,13.1,2.5,19C27.5,39.9,23.2,32.7,21.8,24.7z M81.6,99.8     c1.3,0,2.4,1,2.4,2.4v3.2H36.2v-3.2c0-1.3,1-2.4,2.4-2.4H81.6z M72.7,86.9v8.3H47.5v-8.3H72.7z M53.5,82.3     c0.6-0.7,1.1-1.3,1.5-2.1c1.5-2.4,2.4-5.2,2.4-8c0.8,0.1,1.7,0.1,2.5,0.1c1,0,1.8,0,2.7-0.1c0,3.8,1.5,7.3,3.9,10.1H53.5     L53.5,82.3z M83.9,25.9c0,11.5-2.7,22.1-7.4,30.1C72,63.6,66,67.9,59.8,67.9s-12-4.2-16.6-11.9c-4.8-8-7.4-18.7-7.4-30.1v-11     c0-0.1,0.1-0.3,0.3-0.3h47.6c0.1,0,0.3,0.1,0.3,0.3V25.9z M98.1,24.7c-1.3,8.1-5.7,15.4-12,20.3c1.7-5.9,2.5-12.4,2.5-19v-4.2h7     c0.7,0,1.5,0.3,2,1C98,23.1,98.3,24,98.1,24.7z"></path>
+                    </svg>
+                    <h5>100% GARANTIZADO</h5>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <path fill="#fffceb" d="M103.3,37.8l-9.9-9.9v-8.9c0-4.9-4-8.9-8.9-8.9H18.9C14,10,10,14,10,18.9V55c0,4.5,3.2,8.1,7.5,8.8l6,15.6   c1.8,4.6,7,6.8,11.4,5.2l37.1-14.2c-2,6.6-1,14.1,2.8,20.1l0.8,1.4v15.8c0,1.3,1,2.4,2.4,2.4h29.6c1.3,0,2.4-1,2.4-2.4V53.4   C109.7,47.5,107.5,41.9,103.3,37.8z M105.1,93.4v11.7H80.3V93.4H105.1z M78.1,65L64.7,50.3c-1.8-2-1.7-4.9,0.3-6.7   c2-1.8,4.9-1.8,6.7,0l26.6,26.6l3.3-3.3L95.8,61l0.7-0.3c4.6-1.8,6.8-7,5.2-11.4l-4.3-11.4l3.1,3.1c3.3,3.3,5.2,7.7,5.2,12.3v35.4   H79.3l-1.4-2.1c-3.6-5.9-2.9-13,0.4-19C78.9,66.8,78.8,65.6,78.1,65z M88.8,29.5v24.8L74.9,40.4c-3.6-3.6-9.5-3.6-13.1,0   c-3.6,3.5-3.9,9.3-0.6,13.1l5.3,5.9H18.9c-2.4,0-4.2-2-4.2-4.2V19.1c0-2.4,2-4.2,4.2-4.2h65.6c2.4,0,4.2,2,4.2,4.2v9.8v0.7H88.8z    M93.1,57.1c0.1-0.7,0.3-1.4,0.3-2.1V41.7l3.6,9.5c0.8,2.2-0.3,4.6-2.4,5.4L93.1,57.1z M72.1,65.2L33.6,80   c-0.7,0.3-1.4,0.4-2.1,0.3c-1.7-0.1-2.9-1.3-3.5-2.6l-2.5-6.6l18.8-7.3h26.5L72.1,65.2z M31.3,64l-7.5,2.9L22.7,64H31.3z"></path>
+                        <path fill="#fffceb" d="M29.4,34.4c2.8,0,4.9-2.2,4.9-4.9v-7.8c0-2.8-2.2-4.9-4.9-4.9h-7.8c-2.8,0-4.9,2.2-4.9,4.9v7.8c0,2.8,2.2,4.9,4.9,4.9H29.4   z M23.2,21.3v3.2h4.6v-3.2h1.7c0.1,0,0.3,0.1,0.3,0.3v7.8c0,0.1-0.1,0.3-0.3,0.3h-1.7v-3.2h-4.6v3.2h-1.7c-0.1,0-0.3-0.1-0.3-0.3   v-7.8c0-0.1,0.1-0.3,0.3-0.3H23.2z"></path>
+                    </svg>
+                    <h5>Pagos ONLINE</h5>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <path  fill="#fffceb" d="M100.7,29.6c-13.8-4-27.1-9.4-39.6-16.1c-0.7-0.3-1.4-0.3-2,0c-12.7,6.7-26,12.1-39.8,16.2c-1,0.3-1.6,1.1-1.6,2v18.1     c0,8.4,1.6,16.5,4.8,24c3.1,7.4,7.9,14,14,20c4.4,4.2,9.4,7.9,14.6,10.8c1,0.5,5.7,3,8.6,3.5c0.1,0,0.3,0,0.4,0s0.3,0,0.4,0     c2.9-0.5,7.6-3,8.6-3.5c5.2-2.9,10.2-6.5,14.6-10.8c6.1-5.9,10.9-12.7,14-20c3.1-7.4,4.8-15.4,4.8-24V31.6     C102.4,30.7,101.7,29.8,100.7,29.6z M98,49.9c0,15.9-5.9,29.7-17.4,40.7c-4.1,4-8.9,7.4-13.8,10.1c-2.2,1.2-5.2,2.6-6.9,3     c-1.6-0.4-4.6-1.8-6.9-3c-4.9-2.6-9.5-6.1-13.8-10.1C27.6,79.4,21.7,65.8,21.7,49.9V33.2c13.1-4,25.9-9.1,38-15.5     c12.1,6.4,24.9,11.6,38,15.5L98,49.9L98,49.9z"></path>
+                        <path  fill="#fffceb" d="M71.4,49.9v-7.1c0-6.4-5.2-11.4-11.4-11.4c-6.4,0-11.4,5.2-11.4,11.4v7.1C46,50,43.9,52,43.9,54.6v16.6     c0,2.7,2.2,4.8,4.8,4.8h22.6c2.7,0,4.8-2.2,4.8-4.8V54.8C76.2,52.2,74,50,71.4,49.9z M52.9,42.8c0-4,3.3-7.1,7.1-7.1     c4,0,7.1,3.3,7.1,7.1v7.1H52.8L52.9,42.8L52.9,42.8z M71.9,71.4c0,0.3-0.3,0.5-0.5,0.5H48.7c-0.3,0-0.5-0.3-0.5-0.5V54.8l0,0     c0-0.3,0.3-0.5,0.5-0.5h2h18.7h2c0.3,0,0.5,0.3,0.5,0.5v16.6H71.9z"></path>
+                        <path  fill="#fffceb" d="M108.4,23.7C92.2,19.5,75.8,12.9,61.1,4.8c-0.7-0.4-1.5-0.4-2.2,0c-15.1,8.4-30.5,14.6-47.3,18.9c-1,0.3-1.6,1.1-1.6,2     v24c0,24.7,12,41,22.1,50.3c10.8,10.1,23.3,15.5,27.9,15.5s17-5.6,27.9-15.5C98,90.6,110,74.4,110,49.7V25.9     C110,24.9,109.3,24,108.4,23.7z M84.9,97c-6,5.6-11.9,9-15.7,11c-4.9,2.5-8.2,3.4-9.3,3.4s-4.5-1-9.3-3.4     c-3.8-1.9-9.7-5.4-15.7-11c-9.4-8.7-20.7-24-20.7-47.1V27.5C30.4,23.2,45.4,17.2,60,9.1c14.2,7.8,30,14.2,45.6,18.4v22.3l0,0     C105.6,72.9,94.3,88.3,84.9,97z"></path>
+                    </svg>
+                    <h5>Pagos ONLINE</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>
