@@ -30,7 +30,7 @@ export async function inicioS() {
           if (userData.rol == 'Usuario') {
             alert('¡Bienvenido usuario!')
             window.location.href = '../templates/us.html'
-          } else if (userData.rol == 'Adminitrador') {
+          } else if (userData.rol == 'Administrador') {
             alert('¡Bienvenido administrador!')
             window.location.href = '../templates/home.html'
           } else {
