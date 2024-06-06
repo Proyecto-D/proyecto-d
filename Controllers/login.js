@@ -3,6 +3,17 @@ import { loginauth, q } from '../Controllers/firebase.js'
 const caja = document.getElementById('login')
 const boton = caja['inicio']
 
+function validarCampos() {
+  const email = caja['username'].value.trim()
+  const password = caja['password'].value.trim()
+
+  if (email === '' || password === '') {
+    alert('Debe llenar todos los datos')
+    return false
+  }
+  return true
+}
+
 async function inicioS() {
   const email = caja['username'].value
   const password = caja['password'].value
@@ -42,5 +53,7 @@ async function inicioS() {
 
 boton.addEventListener('click', (e) => {
   e.preventDefault()
-  validar()
+  if (validarCampos()) {
+    inicioS()
+  }
 })
