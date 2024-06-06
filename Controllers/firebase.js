@@ -110,6 +110,20 @@ export async function deleteCollection(collectionPath) {
   })
 }
 
+// Constante para obtener la referencia a la colección "Productos"
+export const ProductosRef = collection(db, 'Productos')
+
+// Función para obtener todos los documentos de la colección "Productos"
+export const GetProductosDocs = async () => {
+  try {
+    const querySnapshot = await getDocs(ProductosRef)
+    return querySnapshot
+  } catch (error) {
+    console.error('Error obteniendo documentos de productos:', error)
+    throw error
+  }
+}
+
 
 export const EliminarProducto = async (codigo) => {
   try {
