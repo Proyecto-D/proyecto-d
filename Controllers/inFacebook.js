@@ -12,7 +12,6 @@ async function logFacebook() {
   }
 }
 
-facebook.addEventListener('click', (e) => {
-  e.preventDefault()
-  logFacebook()
+window.addEventListener('DOMContentLoaded', () => {
+  facebook.addEventListener('click', logFacebook)
 })
