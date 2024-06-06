@@ -1,11 +1,10 @@
-import { loginGoogle, userstate, mensajeA } from '../Controllers/firebase.js'
+import { loginGoogle, mensajeA } from '../Controllers/firebase.js'
 
-const google = document.getElementById('google')
+const google = document.getElementById('googleR')
 
-export async function logGoogle() {
+async function logGoogle() {
   try {
     await loginGoogle()
-    userstate()
     mensajeA()
       .then(() => {
         console.log('Correo electrónico de verificación enviado con éxito')
@@ -16,7 +15,7 @@ export async function logGoogle() {
           error
         )
       })
-    window.location.href = '../Templates/home.html'
+    window.location.href = '../templates/home.html'
   } catch (error) {
     console.error('Error al iniciar sesión con Google:', error)
     alert('Error al iniciar sesión con Google. Inténtelo de nuevo.')
