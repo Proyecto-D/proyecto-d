@@ -4,7 +4,7 @@ import {
     deleteCollection 
 } from '../Controllers/firebase.js';
 
-
+const imprimir = document.getElementById('contcarrito');
 const vaciar = document.getElementById('vaciarCarritoBtn');
 const pagar = document.getElementById('pagarBtn');
 const totalGeneralElement = document.getElementById('totalGeneral');
