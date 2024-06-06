@@ -4,16 +4,13 @@ import {
     deleteCollection 
 } from '../Controllers/firebase.js';
 
-
+const imprimir = document.getElementById('contcarrito');
 const vaciar = document.getElementById('vaciarCarritoBtn');
 const pagar = document.getElementById('pagarBtn');
 const totalGeneralElement = document.getElementById('totalGeneral');
 const mensajeSinProductos = document.getElementById('mensajeSinProductos');
 
 export async function cargarcarrito() {
-
-    const imprimir = document.getElementById('contcarrito');
-
     try {
         const querySnapshot = await GetCarritoDocs();
         let html = "";
@@ -96,7 +93,7 @@ window.decrementarCantidad = async function(button, precio) {
     }
 }
 
-export function actualizarTotal(button, cantidad, precio) {
+function actualizarTotal(button, cantidad, precio) {
     
     var totalElement = button.closest('tr').querySelector('.total');  // Obtener el elemento td que contiene el total
     var nuevoTotal = cantidad * precio; // Calcular el nuevo total
@@ -105,7 +102,7 @@ export function actualizarTotal(button, cantidad, precio) {
     actualizarTotalGeneral();   // Actualizar el total general después de actualizar el total de un producto
 }
 
-export function actualizarTotalGeneral() {
+function actualizarTotalGeneral() {
 
     // Recalcular el total general sumando todos los totales de los productos
     var totalGeneral = 0;
@@ -117,41 +114,55 @@ export function actualizarTotalGeneral() {
     mostrarTotalGeneral(totalGeneral);  // Mostrar el total general actualizado
 }
     
-export function mostrarMensajeSinProductos() {
+function mostrarMensajeSinProductos() {
     mensajeSinProductos.style.display = 'block';
 }
 
 
-export function mostrarTotalGeneral(total) {
+function mostrarTotalGeneral(total) {
     totalGeneralElement.textContent = `Total: $${total}`;
     localStorage.setItem('totalGeneral', total); // Guardar el total en localStorage
 }
 
-export async function eliminarcarrito(){
+async function eliminarcarrito(){
     await deleteCollection('datoscarrito');
 }
 vaciar.addEventListener('click', async () => {
-    try {
-       await eliminarcarrito();
-        alert('carrito vaciado exitosamente');
-        
-        imprimir.innerHTML = ""; // Limpiar la tabla antes de cargar el carrito de nuevo
-        await cargarcarrito();
-    } catch (error) {
-        console.error('Error al eliminar', error);
-    }
+    const productos = document.querySelectorAll('#contcarrito tr[data-codigo]');
+    if (productos.length === 0) {
+        alert('El carrito está vacío. No hay productos que eliminar.');
+    } else {
+        try {
+            await eliminarcarrito();
+            alert('Carrito vaciado exitosamente');
+            
+            // Restablecer el total general a 0
+            localStorage.setItem('totalGeneral', 0);
+            totalGeneralElement.textContent = `Total: $0`;
+
+            imprimir.innerHTML = ""; // Limpiar la tabla antes de cargar el carrito de nuevo
+            await cargarcarrito();
+        } catch (error) {
+            console.error('Error al eliminar', error);
+        }
+    }    
 });
 
 pagar.addEventListener('click', async () => {
-    try {
-        imprimir.innerHTML = "";
-        await eliminarcarrito();
-        alert('Redirigiendo a la pasarela de pago...')
-         window.location.href = '../Templates/pasarela.html'; // Redirigir a la página de pasarela
-    } catch (error) {
-        console.error('Error al eliminar', error);
+    // Verificar si hay productos en el carrito
+    const productos = document.querySelectorAll('#contcarrito tr[data-codigo]');
+    if (productos.length === 0) {
+        alert('El carrito está vacío. Por favor, añade productos antes de pagar.');
+    } else {
+        try {
+            imprimir.innerHTML = "";
+            await eliminarcarrito();
+            alert('Redirigiendo a la pasarela de pago...')
+            window.location.href = '../Templates/pasarela.html'; // Redirigir a la página de pasarela
+        } catch (error) {
+            console.error('Error al eliminar', error);
+        }
     }
 });
-
 
 await cargarcarrito();
