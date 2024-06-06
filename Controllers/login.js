@@ -29,10 +29,10 @@ async function inicioS() {
           const userData = doc.data()
           if (userData.rol == 'Usuario') {
             alert('¡Bienvenido usuario!')
-            window.location.href = '../templates/us.html'
+            window.location.href = '../Templates/homeuser.html'
           } else if (userData.rol == 'Administrador') {
             alert('¡Bienvenido administrador!')
-            window.location.href = '../templates/home.html'
+            window.location.href = '../Templates/home.html'
           } else {
             alert('Error: El usuario no tiene un rol válido')
           }

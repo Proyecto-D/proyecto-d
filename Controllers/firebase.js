@@ -51,7 +51,7 @@ const storage = getStorage()
 const providerGoogle = new GoogleAuthProvider()
 const providerFabook = new FacebookAuthProvider()
 
-
+export const cambiar = (email) => sendPasswordResetEmail(auth, email)
 
 export function verificarAutenticacion(user) {
   if (user) {

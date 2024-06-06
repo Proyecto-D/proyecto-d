@@ -19,7 +19,7 @@ async function registro() {
   const Cemail = document.getElementById('confirm-email').value
   const password = document.getElementById('passwordR').value
   const Cpassword = document.getElementById('confirm-passwordR').value
-  const Rol = 'Usuario'
+  const Rol = document.getElementById('Rol').value
 
   if (password.length < 8) {
     alert('La contraseña debe tener al menos 8 caracteres')
@@ -64,7 +64,7 @@ async function registro() {
         const verificar = loginauth(email, password)
         const validation = await verificar
         if (validation != null) {
-          window.location.href = '../templates/home.html'
+          window.location.href = '../Templates/login.html'
         }
       } else {
         alert('Error al registrar usuario')
