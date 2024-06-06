@@ -59,8 +59,11 @@ function loadContent(page) {
                 break;
             case 'carritoinic.html':
                 import('../Controllers/carritoinic.js').then(module => module.cargarcarritoinic());
+            break;
                 
-                break;
+            case 'tablaproduc.html':
+                import('../Controllers/tablaproduc.js').then(module => module.mostrarProductos());
+            break;
 
             default:
                 console.warn('Page not found: ', page);
