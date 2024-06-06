@@ -57,6 +57,9 @@ function loadContent(page) {
             case 'carrito.html':
                 import('../Controllers/carrito.js').then(module => module.cargarcarrito());
                 break;
+            case 'tablaproduc.html':
+                import('../Controllers/tablaproduc.js').then(module => module.mostrarproductos());
+                break;                   
 
             default:
                 console.warn('Page not found: ', page);
