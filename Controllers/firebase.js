@@ -110,6 +110,17 @@ export async function deleteCollection(collectionPath) {
   })
 }
 
+
+export const EliminarProducto = async (codigo) => {
+  try {
+    await deleteDoc(doc(db, 'Productos', codigo))
+    console.log('Producto eliminado del carrito:', codigo)
+  } catch (error) {
+    console.error('Error al eliminar producto del carrito:', error)
+    throw error
+  }
+}
+
 //Leer registro especifico
 export const Getregister = (codigo) => getDoc(doc(db, 'Productos', codigo))
 
