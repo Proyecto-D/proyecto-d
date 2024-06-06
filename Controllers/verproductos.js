@@ -66,4 +66,4 @@ window.agregarAlCarrito = function(codigo, nombre, precio, urlproducto) {
         .catch(error => {
             console.error('Error al verificar producto en el carrito:', error);
         });
-};
+};;
