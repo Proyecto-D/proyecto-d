@@ -1,11 +1,10 @@
-import { loginGoogle, userstate, mensajeA } from '../Controllers/firebase.js'
+import { loginGoogle, mensajeA } from '../Controllers/firebase.js'
 
-const google = document.getElementById('google')
+const google = document.getElementById('googleR')
 
 async function logGoogle() {
   try {
     await loginGoogle()
-    userstate()
     mensajeA()
       .then(() => {
         console.log('Correo electrónico de verificación enviado con éxito')
