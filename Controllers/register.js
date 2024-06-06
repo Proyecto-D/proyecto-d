@@ -75,6 +75,7 @@ async function registro() {
   }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  registrar.addEventListener('click', registro)
+registrar.addEventListener('click', (e) => {
+  e.preventDefault()
+  registro()
 })
